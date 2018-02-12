@@ -3,6 +3,7 @@ package academy.learnprogramming.inheritance
 import java.time.Year
 
 fun main(args: Array<String>) {
+    topLevel("I'm private!")
     println(Department.ACCOUNTING.getDeptInfo())
 
     println(CompanyCommunications.getTagLine())
@@ -48,6 +49,7 @@ object CompanyCommunications {
 
     fun getTagLine() = "Our company rocks!"
     fun getCopyrightLine() = "Copyright \u00A9 $currentYear Our Company. All rights reserved."
+
 }
 
 class SomeClass private constructor(val someString: String) {
